@@ -1,0 +1,127 @@
+/* Setup Fonts */
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('../fonts/Montserrat-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-SvwiBold';
+    src: url('../fonts/Montserrat-SvwiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* CSS */
+
+body {
+    background-color: #293133;
+    overflow-x: hidden;
+}
+
+h1 {
+    top: 30%;
+
+    text-align: center;
+    font-family: 'Montserrat-Black';
+    font-size: 8vw;
+}
+
+h2 {
+    top: 10%;
+
+    text-align: center;
+
+    font-family: 'Montserrat-Bold';
+    font-size: 3vw;
+}
+
+a {
+    position: relative;
+
+
+    font-family: 'Montserrat-Bold';
+    font-size: 2.25vw;
+    
+    text-decoration: none; 
+}
+
+.button-container {
+    display: flex;
+    
+    justify-content: center;
+    gap: 22%;
+    margin-top: 15vh;
+}
+  
+.button {
+    padding: 1% 1%;
+    background-color: #293145;
+    color: #E6E6E6;
+    border: none;
+    border-radius: 3%;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.05); /* Enlarge the image on hover */
+}
+
+.text {
+    position: relative;
+
+    color: #E6E6E6;
+
+    margin: 0 auto;
+
+    text-shadow: -20px 20px 12px rgba(0, 0, 0, 0.3);
+}
+
+#Exemples {
+    box-shadow: -15px 15px 12px rgba(0, 0, 0, 0.3);
+}
+
+#Contacter {
+    box-shadow: 15px 15px 12px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar {
+    width: var(--scroll-size, 10px);
+    height: var(--scroll-size, 10px);
+}
+body::-webkit-scrollbar-track {
+    background-color: var(--scroll-track, transparent);
+    border-radius: var(--scroll-track-radius, var(--scroll-radius));
+}
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color, grey);
+    background-image: var(--scroll-thumb, none);
+    border-radius: var(--scroll-thumb-radius, var(--scroll-radius));
+}
+
+:root {
+    --scroll-size: 15px;
+    --scroll-radius: 20px;
+    --scroll-track: rgb(255 255 255 / 10%);
+    --scroll-thumb: linear-gradient(45deg, #00aeff, #a68eff);
+}
+  
+#Back {
+    position: absolute;
+
+    top: 2.5%;
+    right: 5%;
+    
+    box-shadow: -20px 20px 12px rgba(0, 0, 0, 0.3);
+}
