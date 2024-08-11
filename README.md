@@ -1,4 +1,4 @@
 # chocolatEnPoudre.github.io
 
-> Site web mer servant de portfolio :
+> Site Web me servant de portfolio :
 > https://chocolatenpoudre.github.io/
