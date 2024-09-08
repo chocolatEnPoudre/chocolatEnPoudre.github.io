@@ -1,24 +1,97 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="icon.png">
-    
-    <meta property="og:title" content="Portfolio Miniamaking"/>
-    <meta property="og:description" content="Le Portfolio Miniamaking de chocolatEnPoudre"/>
-    <meta property="og:image" content="https://chocolatenpoudre.github.io/Portfolio/Preview.png"/>
-    <meta property="og:image:width" content="1270" />
-    <meta property="og:image:height" content="720" />
-    <meta property="og:url" content="https://chocolatenpoudre.github.io/"/>
-</head>
-<body>
-    <h1 class="text">MINIAMAKER</h1>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>chocolatEnPoudre</title>
+        <link rel="stylesheet" href="base.css"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="icon" href="/icon.png">
+        
+        <meta property="og:title" content="Portfolio Miniamaking"/>
+        <meta property="og:description" content="Le Portfolio Miniamaking de chocolatEnPoudre"/>
+        <meta property="og:image" content="https://chocolatenpoudre.github.io/Preview.png"/>
+        <meta property="og:image:width" content="1270" />
+        <meta property="og:image:height" content="720" />
+        <meta property="og:url" content="https://chocolatenpoudre.github.io/"/>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul class="navbar-links">
+                <li><a href="Portfolio/" class="text">Mon Portfolio</a></li>
+                <li><a href="#container_2" class="text">Présentation</a></li>
+                <li><a href="#container_3" class="text">Tarifs</a></li>
+                <li><a href="#container_4" class="text">Réseaux sociaux</a></li>
+                <li><a href="#container_5" class="text">Me Contacter</a></li>
+            </ul>
+        </nav>
+        <div id="container_1">
+            <div id="titles">
+                <h1 id="pseudo" class="text"><img src="icon.png" id="pfp"> chocolatEnPoudre</h1>
+                <h2 id="job" class="text">Miniamaker</h2>
+            </div>
+            </div>
+            <div id="arrow-container">
+                <img src="icons/icons8-down-100.png" id="arrow">
+            </div>
+        </div>
+        <div id="container_2">
+            <h1 class="text" id="header-presentation">Présentation :</h1>
+            <div class="text-div" id="text-presentation">
+Bonjour, je suis chocolatEnPoudre, jeune miniamaker.
 
-    <h2 class="text">chocolatEnPoudre</h2>
+Je propose aujourd'hui mes services de miniamaking.
 
-    <div class="button-container">
-        <a href="Portfolio/" class="button" id="Portfolio">Portfolio</a>
-        <a href="Contacter/" class="button" id="Contacter">Me Contacter</a>
-        <a href="Prod/" class="button" id="Prod">WHITEPROD</a>
-    </div>
-</body>
+Vous pouvez retrouver mes tarifs ci-dessous.
+
+Si vous souhaitez commander une minia, merci de me contacter via mon discord, trouvable dans la rubrique <a href="#container_5" class="link">Me Contacter</a>.
+            </div>
+        </div>
+        <div id="container_3">
+            <h1 class="text" id="header-tarifs">Tarifs</h1>
+            <div id="tarifs-container">
+                <div class="text-div" id="text-tarifs-1">
+<h3 class="headers-tarifs">Précisions sur les paiements :</h3 class="headers-tarifs">
+<h3 class="headers-tarifs">Miniature unique :</h3 class="headers-tarifs">
+- Envoi de la/des miniature(s) avec un filigrane
+- Virement Paypal
+- Envoi de la/des miniature(s) sans filigrane
+<h3 class="headers-tarifs">Packs :</h3 class="headers-tarifs">
+- Envoi de la/des première(s) miniature(s) avec un filigrane
+- Virement paypal unique pour toutes les miniatures
+- Me dm pour les prochaines miniatures (Plus aucun virement à faire)
+<h3 class="headers-tarifs">Abonnements :</h3 class="headers-tarifs">
+- Virement paypal unique pour le mois
+- Miniature livrée chaque semaine sans filigrane
+        </div>
+            <div class="text-div" id="text-tarifs-2">
+<h3 class="headers-tarifs">Miniature unique :</h3 class="headers-tarifs">
+- Miniature : 10€
+- 3 Variations de Miniature : 15€
+<h3 class="headers-tarifs">Packs :</h3 class="headers-tarifs">
+- 3 Miniatures : 25€
+- 3x3 Variations de Miniatures : 40€
+<h3 class="headers-tarifs">Abonnements (5 Miniatures /mois) :</h3 class="headers-tarifs">
+- 1 Miniature / Semaine : 40€ / Mois
+- 3 Variations de Miniature / Semaine : 65€ / Mois
+                </div>
+            </div>
+        <div id="container_4">
+            <div id="links-social">
+                <h1 id="title-social" class="text">Mes réseaux sociaux</h1>
+                <div id="container-social">
+                    <a href="https://www.instagram.com/chocoenpoudre/">
+                        <img src="icons/icons8-instagram-logo-250.png">
+                    </a>
+                    <a href="#container_5">
+                        <img src="icons/icons8-discord-250.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="container_5">
+            <div id="contact-container">
+                <p class="text">Afin de me contacter <br>Merci de me contacter via mon discord :<br><br>chocolatEnPoudre</p>
+            </div>
+        </div>
+    </body>
+</html>

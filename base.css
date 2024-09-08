@@ -1,0 +1,202 @@
+/* Setup Fonts */
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('fonts/Montserrat-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General adjustements */
+
+body {
+    background-color: #101010;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+#pfp {
+    height: 3.5dvw;
+    border-radius: 50%;
+}
+
+.text {
+    color: #E6E6E6;
+
+    font-family: 'Montserrat-Bold';
+    
+    text-align: center;
+
+    font-size: 1.5dvw;
+}
+
+#container_1, #container_2, #container_3, #container_4, #container_5 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+}
+
+#container_1 {
+    top: 0;
+}
+
+#container_2 {
+    top: 0;
+}
+
+#container_3 {
+    top: 0;
+}
+
+#container_4 {
+    top: 0;
+}
+
+#container_5 {
+    top: 0;
+}
+
+#titles {
+    position: absolute;
+
+    margin: 0%;
+
+    top: 10%;
+
+    width: 100%;
+    height: 40%;
+}
+
+.text-div {
+    color: #E6E6E6;
+
+    font-family: 'Montserrat-Bold';
+    
+    text-align: left;
+
+    position: relative;
+
+    width: 80%;
+    left: 10%;
+
+    white-space: pre-wrap;
+}
+
+#pseudo {
+    font-size: 3.5dvw;
+
+    top: 5%;
+}
+
+#job {
+    font-size: 2.5dvw;
+}
+
+#arrow-container {
+    display: flex;
+    align-items: center;
+}
+
+#arrow {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body::-webkit-scrollbar {
+    width: var(--scroll-size, 10px);
+    height: var(--scroll-size, 10px);
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--scroll-track, transparent);
+    border-radius: var(--scroll-track-radius, var(--scroll-radius));
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color, grey);
+    background-image: var(--scroll-thumb, none);
+    border-radius: var(--scroll-thumb-radius, var(--scroll-radius));
+}
+
+:root {
+    --scroll-size: 15px;
+    --scroll-radius: 20px;
+    --scroll-track: rgb(255 255 255 / 10%);
+    --scroll-thumb: linear-gradient(45deg, #adadad, #ebebeb);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202020;
+    padding: 1rem 0;
+
+    opacity: 1;
+    z-index: 1000;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+
+    justify-content: center;
+
+    position: relative;
+    width: 100%;
+    left: 0%;
+
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0 5rem;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.25dvw;
+    transition: move 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+    color: #E6E6F6;
+}
+
+.link {
+    text-decoration: underline;
+    color: #E6E6E6;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #E6E6F6;
+}
