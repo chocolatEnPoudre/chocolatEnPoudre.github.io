@@ -177,7 +177,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar-links li {
-    margin: 0 5rem;
+    margin: 0 4dvw;
 }
 
 .navbar-links a {
@@ -199,4 +199,30 @@ body::-webkit-scrollbar-thumb {
 
 .link:hover {
     color: #E6E6F6;
+}
+
+@media (max-width: 768px) {
+    #pseudo {
+        font-size: 7dvw;
+    }
+
+    #job {
+        font-size: 5dvw;
+    }
+
+    #pfp {
+        height: 8dvw;
+    }
+
+    .navbar {
+        padding: 2dvw 0;
+    }
+
+    .navbar-links a {
+        font-size: 2dvw;
+    }
+
+    .navbar-links li {
+        margin: 0 2dvw;
+    }
 }

@@ -81,3 +81,17 @@
 .grid-item:hover p {
     font-size: 1.2vw;
 }
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container {
+        width: 90%;
+    }
+
+    .grid-item p {
+        font-size: 2dvw;
+    }
+}

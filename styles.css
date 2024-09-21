@@ -52,7 +52,7 @@
 #container-social img {
     height: auto;
 
-    width: 200px;
+    width: 10dvw;
 }
 
 #contact-container {
@@ -122,4 +122,67 @@ p {
 .headers-tarifs {
     margin: 0;
     padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    #title-social {
+        font-size: 8dvw;
+    }
+
+    #container-social img {
+        width: 30dvw;
+    }
+
+    #contact-text {
+        font-size: 6dvw;
+    }
+
+    #header-presentation {
+        font-size: 8dvw;
+    }
+    
+    #text-presentation {
+        font-size: 4dvw;
+    }
+    
+    #header-tarifs {
+        font-size: 8dvw;
+    }
+    
+    #tarifs-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 10%;
+        left: 0%;
+        width: 100%;
+    
+        overflow: hidden;
+    }
+    
+    #text-tarifs-1, #text-tarifs-2 {
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    #text-tarifs-1 {
+        font-size: 3dvw;
+
+        width: 80%;
+
+        order: 2;
+    }
+    
+    #text-tarifs-2 {
+        font-size: 3dvw;
+
+        width: 80%;
+
+        order: 1;
+    }
+    
+    .headers-tarifs {
+        margin: 0;
+        padding: 1rem 0;
+    }
 }
