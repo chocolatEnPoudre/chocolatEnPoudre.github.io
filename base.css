@@ -183,7 +183,7 @@ body::-webkit-scrollbar-thumb {
 .navbar-links a {
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 1.25dvw;
+    font-size: 1.75dvw;
     transition: move 0.3s ease-in-out;
 }
 
@@ -219,10 +219,10 @@ body::-webkit-scrollbar-thumb {
     }
 
     .navbar-links a {
-        font-size: 2dvw;
+        font-size: 2.25dvw;
     }
 
     .navbar-links li {
-        margin: 0 2dvw;
+        margin: 0 1.25dvw;
     }
 }
