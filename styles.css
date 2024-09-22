@@ -22,7 +22,7 @@
     margin-right: -5%;
 
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto);
     gap: 10%;
     
     justify-content: center;
