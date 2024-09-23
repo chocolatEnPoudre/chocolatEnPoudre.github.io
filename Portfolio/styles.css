@@ -96,16 +96,4 @@
     .grid-item p {
         font-size: 2dvw;
     }
-
-    #container_2 {
-        height: auto;
-    }
-
-    #container_3 {
-        height: auto;
-    }
-
-    .grid-container {
-        height: 40%;
-    }
 }
