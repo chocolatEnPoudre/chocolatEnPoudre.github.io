@@ -37,7 +37,7 @@
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-45%, -50%);
+    transform: translate(-50%, -40%);
     width: 80%;
 
     justify-content: center;
@@ -46,10 +46,16 @@
     display: grid;
 
     gap: 10%;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
 }
 
 #container-social img {
+    height: auto;
+
+    width: 10dvw;
+}
+
+#container-social svg {
     height: auto;
 
     width: 10dvw;
