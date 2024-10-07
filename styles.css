@@ -77,12 +77,12 @@ p {
     font-size: 2.5dvw;
 
     position: relative;
-    top: 10%;
+    top: 15%;
 }
 
 #text-presentation {
     position: relative;
-    top: 15%;
+    top: 20%;
     font-size: 1.75dvw;
 }
 
@@ -90,7 +90,7 @@ p {
     font-size: 2.5dvw;
 
     position: relative;
-    top: 10%;
+    top: 15%;
 }
 
 #text-tarifs-1 {
@@ -118,7 +118,7 @@ p {
 
 #tarifs-container {
     position: relative;
-    top: 10%;
+    top: 15%;
     left: 0%;
     width: 100%;
 
@@ -135,8 +135,12 @@ p {
         font-size: 8dvw;
     }
 
-    #container-social img {
-        width: 30dvw;
+    #container-social img, #container-social svg {
+        width: 15dvh;
+    }
+
+    #container-social {
+        grid-template-columns: repeat(2, auto);
     }
 
     #contact-text {
