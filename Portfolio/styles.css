@@ -96,4 +96,8 @@
     .grid-item p {
         font-size: 2dvw;
     }
+
+    #container_3 {
+        transform: translate(0%, -35%);
+    }
 }

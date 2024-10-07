@@ -191,4 +191,8 @@ p {
         margin: 0;
         padding: 1rem 0;
     }
+
+    #container_3 {
+        height: auto;
+    }
 }
