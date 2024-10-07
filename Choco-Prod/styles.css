@@ -193,4 +193,8 @@ p {
         margin: 0;
         padding: 1rem 0;
     }
+
+    #container_2 {
+        height: auto;
+    }
 }
