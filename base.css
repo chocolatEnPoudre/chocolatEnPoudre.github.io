@@ -201,6 +201,19 @@ body::-webkit-scrollbar-thumb {
     color: #E6E6F6;
 }
 
+footer {
+    position: relative;
+
+    height: 60%;
+    top: 40%;
+    display: block;
+
+    background-color: #303030;
+
+    padding: 0;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     #pseudo {
         font-size: 7dvw;
