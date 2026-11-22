@@ -13,16 +13,20 @@ const SITE = {
   price: 15,                                   // € par miniature
   discord: "chocolatEnPoudre",
   imgBase: "Miniatures/",                      // dossier Miniatures/ à la racine du dépôt portfolio
-  imgFallback: "https://chocolatenpoudre.github.io/Portfolio/Miniatures/", // TEMPORAIRE (ancien site) : supprime cette ligne une fois les images déplacées
+  imgFallback: "assets/", // TEMPORAIRE (ancien site) : supprime cette ligne une fois les images déplacées
 };
 
 const MINIATURES = [
   { file: "Minia-1-NA.png",       creator: "No'Agrume",       title: "T'es Sûr d'Avoir Compris CHAINSAW MAN Reze arc ?" },
   { file: "Minia-1-McYakoub.png", creator: "McYakoub",        title: "Stray : le jour où l'humanité a DISPARU… mais pas ses ERREURS" },
   { file: "Minia-2-FW.png",       creator: "FireWriting",     title: "Conférence Comment Écrire une Bonne histoire ?" },
-  { file: "Minia-2-2-3-Tony.png", creator: "Tony Coiffeuille", title: "Pourquoi la Chine ne se qualifie JAMAIS pour la Coupe du Monde ?" },
+  { file: "Minia-2-2-3-Tony.png", creator: "Tony Coiffeuille",title: "Pourquoi la Chine ne se qualifie JAMAIS pour la Coupe du Monde ?" },
+  { file: "Minia-1-Tony.png",     creator: "Tony Coiffeuille",title: "Jay Chou : comment une star taïwanaise est devenue le roi de la musique chinoise" },
   { file: "Minia-1-Berou.png",    creator: "Berou",           title: "Comment Hollow Knight a survécu AUTANT de temps ?" },
   { file: "Minia-2-Berou.png",    creator: "Berou",           title: "La Déesse Qui a Détruit Son Propre Monde" },
+  { file: "Minia-1-Ichinose.png", creator: "Ichinose102",     title: "Wonder Egg Priority méritait mieux…" },
+  { file: "Minia-2-Mathart.png",  creator: "Mathart",         title: "Se faire de l'ARGENT quand on est JEUNE !" },
+  { file: "Minia-6-Mathart.png",  creator: "Mathart",         title: "FAIS des ÉTUDES (et voilà pourquoi)" },
 ];
 
 /* ============================================================
