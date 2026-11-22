@@ -2,7 +2,7 @@
    ✏️  LE SEUL FICHIER À MODIFIER
    Ajouter une minia : copie une ligne dans MINIATURES, change
    file / title / creator. La plus récente en premier.
-   Le fichier doit être dans Portfolio/Miniatures/ sur ton GitHub.
+   Le fichier doit être dans Miniatures/ du dépôt portfolio.
    Les filtres par créateur se mettent à jour tout seuls.
    ============================================================ */
 const SITE = {
@@ -12,7 +12,8 @@ const SITE = {
   since: "2024-08-01",                         // début de ton activité (AAAA-MM-JJ) : calcule « depuis +X ans »
   price: 15,                                   // € par miniature
   discord: "chocolatEnPoudre",
-  imgBase: "https://chocolatenpoudre.github.io/Portfolio/Miniatures/",
+  imgBase: "Miniatures/",                      // dossier Miniatures/ à la racine du dépôt portfolio
+  imgFallback: "https://chocolatenpoudre.github.io/Portfolio/Miniatures/", // TEMPORAIRE (ancien site) : supprime cette ligne une fois les images déplacées
 };
 
 const MINIATURES = [

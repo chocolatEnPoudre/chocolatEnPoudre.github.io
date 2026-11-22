@@ -29,10 +29,11 @@ $("#yr").textContent = new Date().getFullYear();
 }
 $("#marq").textContent = ("MINIATURES YOUTUBE ✦ " + SITE.name.toUpperCase() + " ✦ ").repeat(10);
 
+const imgSrc = (f, fb) => (fb ? SITE.imgFallback : SITE.imgBase) + encodeURIComponent(f);
 let shown = 0;
 const card = (m, i, d) => `<li class="card" style="--i:${d}"><button data-i="${i}" aria-label="Agrandir : ${esc(m.title)}">
     <span class="n">N°${String(i + 1).padStart(2, "0")}</span>
-    <img src="${SITE.imgBase + encodeURIComponent(m.file)}" alt="${esc(m.title)}" loading="lazy">
+    <img src="${imgSrc(m.file)}" data-f="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy">
     <span class="cap"><b>${esc(m.title)}</b><i>par ${esc(m.creator)}</i></span></button></li>`;
 function render(more) {
   if (!more) { list = MINIATURES.filter(m => filter === "Tout" || m.creator === filter); shown = 0; grid.innerHTML = ""; }
@@ -44,7 +45,11 @@ function render(more) {
   $("#count").textContent = list.length;
 }
 $("#more").onclick = () => render(true);
-grid.addEventListener("error", e => e.target.closest?.("li")?.classList.add("broken"), true);
+grid.addEventListener("error", e => {          // image absente : on tente l'ancien dossier, sinon carte « introuvable »
+  const im = e.target; if (im.tagName !== "IMG") return;
+  if (SITE.imgFallback && !im.dataset.fb) { im.dataset.fb = 1; im.src = imgSrc(im.dataset.f, true); }
+  else im.closest("li")?.classList.add("broken");
+}, true);
 grid.addEventListener("click", e => { const b = e.target.closest("button[data-i]"); if (b) show(+b.dataset.i); });
 
 /* Filtres par créateur (auto) */
@@ -57,11 +62,13 @@ const chips = $("#chips");
 });
 
 /* Lightbox */
+const lbi = lb.querySelector("img");
+lbi.onerror = () => { if (SITE.imgFallback && !lbi.dataset.fb) { lbi.dataset.fb = 1; lbi.src = imgSrc(list[idx].file, true); } };
 function show(i) {
   idx = (i + list.length) % list.length;
   const m = list[idx];
-  lb.querySelector("img").src = SITE.imgBase + encodeURIComponent(m.file);
-  lb.querySelector("img").alt = m.title;
+  lbi.dataset.fb = ""; lbi.src = imgSrc(m.file);
+  lbi.alt = m.title;
   lb.querySelector("p b").textContent = m.title;
   lb.querySelector("p small").textContent = "par " + m.creator;
   if (!lb.open) lb.showModal();
