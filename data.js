@@ -8,7 +8,7 @@
 const SITE = {
   name: "chocolatEnPoudre",
   avatar: "https://cdn.discordapp.com/avatars/1215593183925502025/70c3734334bd28e501c61231f53a3e45.png?size=128", // ta photo de profil (logo en haut)
-  perPage: 9,                                  // miniatures affichées avant « Voir plus »
+  perPage: 6,                                  // miniatures affichées avant « Voir plus »
   since: "2024-08-01",                         // début de ton activité (AAAA-MM-JJ) : calcule « depuis +X ans »
   price: 15,                                   // € par miniature
   discord: "chocolatEnPoudre",
