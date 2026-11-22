@@ -12,7 +12,6 @@ const SITE = {
   since: "2024-08-01",                         // début de ton activité (AAAA-MM-JJ) : calcule « depuis +X ans »
   price: 15,                                   // € par miniature
   discord: "chocolatEnPoudre",
-  imgBase: "Miniatures/",                      // dossier Miniatures/ à la racine du dépôt portfolio
   imgFallback: "assets/", // TEMPORAIRE (ancien site) : supprime cette ligne une fois les images déplacées
 };
 
