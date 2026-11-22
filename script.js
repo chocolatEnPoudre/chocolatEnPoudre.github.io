@@ -85,7 +85,7 @@ lb.addEventListener("touchend", e => { const d = e.changedTouches[0].clientX - x
 
 /* Toast + copie du Discord */
 function toast(t) { const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 2200); }
-$("#copy").onclick = () => navigator.clipboard.writeText(SITE.discord).then(() => toast("Pseudo copié ✓ colle-le sur Discord"), () => toast("Discord : " + SITE.discord));
+$("#copy").onclick = () => navigator.clipboard.writeText(SITE.discord).then(() => toast("Pseudo copié ✓ Ajoute moi sur Discord"), () => toast("Discord : " + SITE.discord));
 
 /* Avis clients */
 $("#avis").hidden = !REVIEWS.length;
