@@ -26,6 +26,7 @@ const MINIATURES = [
   { file: "Minia-1-Ichinose.png", creator: "Ichinose102",     title: "Wonder Egg Priority méritait mieux…" },
   { file: "Minia-2-Mathart.png",  creator: "Mathart",         title: "Se faire de l'ARGENT quand on est JEUNE !" },
   { file: "Minia-6-Mathart.png",  creator: "Mathart",         title: "FAIS des ÉTUDES (et voilà pourquoi)" },
+  { file: "Minia-1-Steaal.png",   creator: "Steaal",          title: "L’homme retrouvé mort sur une plage… ce papier va vous glacer le sang" },
 ];
 
 /* ============================================================
