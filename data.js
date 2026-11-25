@@ -21,6 +21,7 @@ const MINIATURES = [
   { file: "Minia-2-FW.png",       creator: "FireWriting",     title: "Conférence Comment Écrire une Bonne histoire ?" },
   { file: "Minia-2-2-3-Tony.png", creator: "Tony Coiffeuille",title: "Pourquoi la Chine ne se qualifie JAMAIS pour la Coupe du Monde ?" },
   { file: "Minia-1-Tony.png",     creator: "Tony Coiffeuille",title: "Jay Chou : comment une star taïwanaise est devenue le roi de la musique chinoise" },
+  { file: "Minia-5-Tony.png",     creator: "Tony Coiffeuille",title: "Est-ce que Mbappé aurait dû s'excuser ? Quelles conséquences ?" },
   { file: "Minia-1-Berou.png",    creator: "Berou",           title: "Comment Hollow Knight a survécu AUTANT de temps ?" },
   { file: "Minia-2-Berou.png",    creator: "Berou",           title: "La Déesse Qui a Détruit Son Propre Monde" },
   { file: "Minia-1-Ichinose.png", creator: "Ichinose102",     title: "Wonder Egg Priority méritait mieux…" },
