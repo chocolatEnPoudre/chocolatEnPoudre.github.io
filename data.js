@@ -2,7 +2,8 @@
    ✏️  LE SEUL FICHIER À MODIFIER
    Ajouter une minia : copie une ligne dans MINIATURES, change
    file / title / creator. La plus récente en premier.
-   Le fichier doit être dans Miniatures/ du dépôt portfolio.
+   Le fichier doit être dans le dossier assets/ du dépôt.
+   Mention facultative (ex : minia d'entraînement) : ajoute  tag: "Entraînement"  dans la ligne.
    Les filtres par créateur se mettent à jour tout seuls.
    ============================================================ */
 const SITE = {
@@ -12,7 +13,8 @@ const SITE = {
   since: "2024-08-01",                         // début de ton activité (AAAA-MM-JJ) : calcule « depuis +X ans »
   price: 15,                                   // € par miniature
   discord: "chocolatEnPoudre",
-  imgFallback: "assets/", // TEMPORAIRE (ancien site) : supprime cette ligne une fois les images déplacées
+  imgBase: "assets/",                          // dossier des images (relatif à la racine du dépôt, SANS « / » devant)
+  views: 200000,                               // vues générées : le site écrit tout seul « +200K », « +1,2M »…
 };
 
 const MINIATURES = [
@@ -28,7 +30,7 @@ const MINIATURES = [
   { file: "Minia-2-Mathart.png",  creator: "Mathart",         title: "Se faire de l'ARGENT quand on est JEUNE !" },
   { file: "Minia-6-Mathart.png",  creator: "Mathart",         title: "FAIS des ÉTUDES (et voilà pourquoi)" },
   { file: "Minia-1-Steaal.png",   creator: "Steaal",          title: "L’homme retrouvé mort sur une plage… ce papier va vous glacer le sang" },
-  { file: "Minia-1-CharlieHaid.png",   creator: "Charlie Haid - ENTRAÎNEMENT",          title: "Ce que le scroll fait vraiment à votre cerveau." },
+  { file: "Minia-1-CharlieHaid.png",   creator: "Charlie Haid",  title: "Ce que le scroll fait vraiment à votre cerveau.", tag: "Entraînement" },
 ];
 
 /* ============================================================

@@ -29,10 +29,10 @@ $("#yr").textContent = new Date().getFullYear();
 }
 $("#marq").textContent = ("MINIATURES YOUTUBE ✦ " + SITE.name.toUpperCase() + " ✦ ").repeat(10);
 
-const imgSrc = (f, fb) => (fb ? SITE.imgFallback : SITE.imgBase) + encodeURIComponent(f);
+const imgSrc = f => SITE.imgBase + encodeURIComponent(f);
 let shown = 0;
 const card = (m, i, d) => `<li class="card" style="--i:${d}"><button data-i="${i}" aria-label="Agrandir : ${esc(m.title)}">
-    <span class="n">N°${String(i + 1).padStart(2, "0")}</span>
+    <span class="n">N°${String(i + 1).padStart(2, "0")}</span>${m.tag ? `<span class="tg">${esc(m.tag)}</span>` : ""}
     <img src="${imgSrc(m.file)}" data-f="${esc(m.file)}" alt="${esc(m.title)}" loading="lazy">
     <span class="cap"><b>${esc(m.title)}</b><i>par ${esc(m.creator)}</i></span></button></li>`;
 function render(more) {
@@ -45,11 +45,7 @@ function render(more) {
   $("#count").textContent = list.length;
 }
 $("#more").onclick = () => render(true);
-grid.addEventListener("error", e => {          // image absente : on tente l'ancien dossier, sinon carte « introuvable »
-  const im = e.target; if (im.tagName !== "IMG") return;
-  if (SITE.imgFallback && !im.dataset.fb) { im.dataset.fb = 1; im.src = imgSrc(im.dataset.f, true); }
-  else im.closest("li")?.classList.add("broken");
-}, true);
+grid.addEventListener("error", e => { if (e.target.tagName === "IMG") e.target.closest("li")?.classList.add("broken"); }, true);   // image absente → carte « introuvable »
 grid.addEventListener("click", e => { const b = e.target.closest("button[data-i]"); if (b) show(+b.dataset.i); });
 
 /* Filtres par créateur (auto) */
@@ -63,14 +59,13 @@ const chips = $("#chips");
 
 /* Lightbox */
 const lbi = lb.querySelector("img");
-lbi.onerror = () => { if (SITE.imgFallback && !lbi.dataset.fb) { lbi.dataset.fb = 1; lbi.src = imgSrc(list[idx].file, true); } };
 function show(i) {
   idx = (i + list.length) % list.length;
   const m = list[idx];
-  lbi.dataset.fb = ""; lbi.src = imgSrc(m.file);
+  lbi.src = imgSrc(m.file);
   lbi.alt = m.title;
   lb.querySelector("p b").textContent = m.title;
-  lb.querySelector("p small").textContent = "par " + m.creator;
+  lb.querySelector("p small").textContent = "par " + m.creator + (m.tag ? " · " + m.tag : "");
   if (!lb.open) lb.showModal();
 }
 lb.addEventListener("click", e => {
@@ -102,6 +97,30 @@ ra.onclick = e => { const b = e.target.closest("button"); if (b) rv.scrollBy({ l
 rv.addEventListener("scroll", rvUpdate, { passive: true });
 addEventListener("resize", rvUpdate);
 rvUpdate();
+
+/* Compteur de vues : monte de 0 à SITE.views quand il apparaît à l'écran (une seule fois) */
+{
+  const el = $("#views"), v = SITE.views;
+  const [u, s] = v >= 1e6 ? [1e6, "M"] : v >= 1e3 ? [1e3, "K"] : [1, ""];
+  const t = Math.round(v / u * 10) / 10, dec = Number.isInteger(t) ? 0 : 1;
+  const fmt = n => n.toFixed(dec).replace(".", ",") + s;
+  el.textContent = fmt(t);
+  $(".views").setAttribute("aria-label", "+" + fmt(t) + " vues générées");
+  if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    el.textContent = fmt(0);
+    new IntersectionObserver((es, ob) => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      ob.disconnect();
+      const t0 = performance.now() + 350, D = 1800;
+      const tick = now => {
+        const p = Math.max(0, Math.min((now - t0) / D, 1));
+        el.textContent = fmt(t * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }), { threshold: .5 }).observe(el);
+  }
+}
 
 render();
 

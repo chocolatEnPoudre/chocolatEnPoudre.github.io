@@ -23,8 +23,15 @@ mark{background:var(--caramel);color:var(--cocoa);padding:0 .08em;border:var(--b
 .price{margin-left:auto;border:var(--b);background:var(--caramel);box-shadow:var(--sh);padding:.8rem 1.7rem;text-align:center;transform:rotate(6deg);outline:2px dashed var(--cocoa);outline-offset:-9px}
 .price b{display:block;font:800 clamp(2.2rem,5vw,3.4rem)/1 var(--disp)}.price small{font-size:.8rem}
 .hero .price{padding:.9rem 2rem;box-shadow:9px 9px 0 var(--cocoa);outline-offset:-11px}
-.hero .price b{font-size:clamp(3.2rem,8vw,6.5rem)}.hero .price small{font-size:1.05rem}
-@media(min-width:900px){.hero .price{position:absolute;right:clamp(1.5rem,6vw,6rem);bottom:3rem;margin:0}}
+.hero .price b{font-size:clamp(2.8rem,6vw,5rem)}.hero .price small{font-size:1.05rem}
+@media(min-width:900px){.lead{margin-top:2.9rem}}
+@media(min-width:1100px){
+.hero .badges{display:contents}
+.hero .price{position:absolute;right:clamp(1.5rem,6vw,6rem);bottom:3rem;margin:0}
+.hero .price b{font-size:clamp(3.2rem,6vw,5.6rem)}
+.hero .price.views{right:clamp(3rem,4vw,4rem);bottom:auto;top:4rem;padding:2rem 4.4rem;box-shadow:10px 10px 0 var(--cocoa);outline-offset:-12px;transform:rotate(5deg)}
+.hero .price.views b{font-size:clamp(3rem,6vw,6rem)}
+}
 .burger{display:none;width:48px;height:44px;border:var(--b);background:var(--caramel);box-shadow:3px 3px 0 var(--cocoa);cursor:pointer;padding:0;place-content:center;gap:5px;transition:transform .12s,box-shadow .12s}
 .burger span{display:block;width:22px;height:3px;background:var(--cocoa);transition:transform .2s,opacity .2s}
 .burger:active{transform:translate(3px,3px);box-shadow:none}
@@ -126,3 +133,8 @@ dialog[open]{animation:pop .25s}
 .contact #copy:hover{box-shadow:14px 14px 0 var(--caramel)}
 .contact #copy:active{box-shadow:0 0 0}
 }
+
+.badges{display:flex;align-items:center;justify-content:space-between;gap:2rem;width:100%;padding:0 .6rem;margin-top:.4rem}
+.badges .price{margin:0}
+.price.views{background:var(--milk);transform:rotate(-4deg)}
+.tg{position:absolute;top:.6rem;right:.6rem;background:var(--caramel);border:2px solid var(--cocoa);padding:0 .55rem;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;transform:rotate(3deg)}
