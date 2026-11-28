@@ -25,12 +25,14 @@ mark{background:var(--caramel);color:var(--cocoa);padding:0 .08em;border:var(--b
 .hero .price{padding:.9rem 2rem;box-shadow:9px 9px 0 var(--cocoa);outline-offset:-11px}
 .hero .price b{font-size:clamp(2.8rem,6vw,5rem)}.hero .price small{font-size:1.05rem}
 @media(min-width:900px){.lead{margin-top:2.9rem}}
-@media(min-width:1100px){
+@media(min-width:1280px){
 .hero .badges{display:contents}
 .hero .price{position:absolute;right:clamp(1.5rem,6vw,6rem);bottom:3rem;margin:0}
 .hero .price b{font-size:clamp(3.2rem,6vw,5.6rem)}
-.hero .price.views{right:clamp(3rem,4vw,4rem);bottom:auto;top:4rem;padding:2rem 4.4rem;box-shadow:10px 10px 0 var(--cocoa);outline-offset:-12px;transform:rotate(5deg)}
-.hero .price.views b{font-size:clamp(3rem,6vw,6rem)}
+/* carré des vues : taille (--f) calculée d'après la place libre à droite du titre */
+.hero .price.views{--f:clamp(3.5rem,calc((100vw - 900px)*.24),9rem);right:clamp(1.5rem,4vw,4rem);bottom:auto;top:2rem;padding:calc(var(--f)*.25) calc(var(--f)*.4);box-shadow:10px 10px 0 var(--cocoa);outline-offset:-14px;transform:rotate(5deg)}
+.hero .price.views b{font-size:var(--f)}
+.hero .price.views small{margin-top:.15em;font-size:max(1rem,calc(var(--f)*.2));letter-spacing:.02em}
 }
 .burger{display:none;width:48px;height:44px;border:var(--b);background:var(--caramel);box-shadow:3px 3px 0 var(--cocoa);cursor:pointer;padding:0;place-content:center;gap:5px;transition:transform .12s,box-shadow .12s}
 .burger span{display:block;width:22px;height:3px;background:var(--cocoa);transition:transform .2s,opacity .2s}

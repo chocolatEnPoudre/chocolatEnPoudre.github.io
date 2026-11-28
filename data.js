@@ -30,7 +30,8 @@ const MINIATURES = [
   { file: "Minia-2-Mathart.png",  creator: "Mathart",         title: "Se faire de l'ARGENT quand on est JEUNE !" },
   { file: "Minia-6-Mathart.png",  creator: "Mathart",         title: "FAIS des ÉTUDES (et voilà pourquoi)" },
   { file: "Minia-1-Steaal.png",   creator: "Steaal",          title: "L’homme retrouvé mort sur une plage… ce papier va vous glacer le sang" },
-  { file: "Minia-1-CharlieHaid.png",   creator: "Charlie Haid",  title: "Ce que le scroll fait vraiment à votre cerveau.", tag: "Entraînement" },
+  { file: "Minia-1-CharlieHaid.png", creator: "Charlie Haid", title: "Ce que le scroll fait vraiment à votre cerveau.", tag: "Entraînement" },
+  { file: "Minia-1-CARTEUR.png", creator: "CARTEUR", title: "3 histoires VRAIES (et tragiques) cachées dans nos jeux vidéo ! (Elden Ring, RDR2, Man of Medan)"},
 ];
 
 /* ============================================================
